@@ -176,6 +176,13 @@ public class RmlMapperTest extends MappingTest {
 					"RmlMapper/test2/subjectMapping.output.ttl");
 	}
 	
+	@Test
+	public void testCsvMapping() {
+		testMapping("RmlMapper", 
+					"RmlMapper/csv/moon-walkers.rml.ttl",
+					"RmlMapper/csv/moon-walkers.output.ttl");
+	}
+	
 	//TODO: PM: add test for rml:reference and rr:template where a value is not found.
 
 }

@@ -45,7 +45,7 @@ public class IoUtils {
 			while ((length = inputStream.read(buffer)) != -1) {
 			    result.write(buffer, 0, length);
 			}
-			inputStream.reset();
+//			inputStream.reset();
 		} catch (IOException e) {
 			throw new RuntimeException(String.format("failed to read input stream [%s]", inputStream), e);
 		}
