@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collections;
 import java.util.Optional;
+import java.util.Set;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -92,7 +93,9 @@ public class RmlMapperTest {
 		
 		RmlMappingLoader loader = RmlMappingLoader.build();
 		InputStream input = RmlMapperTest.class.getResourceAsStream("simple.namedcarml.rml.ttl");
-		mapper.map(loader.load(input, RDFFormat.TURTLE));
+		Set<TriplesMap> mapping = loader.load(input, RDFFormat.TURTLE);
+		System.out.println(mapping);
+		mapper.map(mapping);
 		
 		assertThat(mapper.getSourceManager().getSource(streamName), is(input));
 	}

@@ -243,6 +243,7 @@ public class RmlMapper {
 				return Optional.empty();
 
 			NameableStream stream = (NameableStream) o;
+			System.out.println(stream.getStreamName());
 			Optional<String> name = Optional.ofNullable(stream.getStreamName());
 			String resolved =
 				name.isPresent() ?
@@ -473,8 +474,8 @@ public class RmlMapper {
 
 		return new TriplesMapperComponents<>(
 			logicalSourceResolvers.get(referenceFormulation),
-			sourceResolver.apply(logicalSource.getSource()),
-			logicalSource.getIterator()
+			logicalSource,
+			sourceResolver
 		);
 	}
 
