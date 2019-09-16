@@ -34,7 +34,6 @@
 			<groupId>org.eclipse.rdf4j</groupId>
 			<artifactId>rdf4j-rio-trig</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
@@ -90,6 +89,13 @@
 			<artifactId>mockito-core</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.rdf4j</groupId>
+			<artifactId>rdf4j-rio-nquads</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
 
 	</dependencies>
 
